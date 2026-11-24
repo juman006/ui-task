@@ -1,0 +1,17 @@
+Build the responsive page described below as ONE self-contained HTML file named task1.html (HTML + CSS + JS inline). The attached 3D model human-heart-cutaway.glb sits in the same folder as the page.
+
+Efficiency rules (very important):
+- Use ZERO <div> elements. Build the layout only with semantic elements (header, nav, main, section, article, figure, footer, ul) and CSS Grid on <body>.
+- Use ::before / ::after, attr() and CSS custom properties instead of extra elements for icons, badges and animated shapes.
+- Generate the repeated sidebar links from a JS array. Keep the JS short, no comments, no unused CSS.
+- The only external code allowed: three.js r128 (cdnjs) and GLTFLoader 0.128 (jsDelivr), as <script> tags.
+
+Layout:
+- <body> is a full-viewport grid: header spans the top; a gray scrollable sidebar on the left spans down to the bottom; main on the right; footer under main only.
+- Header: dark red (#8b0000); white serif logo "Training 2026" with a graduation-cap badge on the left; buttons on the right: "العربية" (toggles RTL/Arabic and back, translating all texts), "+ Add content", "Clear content". "Add content" appends an "Update N" line inside the header (the header grows, the content area shrinks); "Clear content" removes them all.
+- Sidebar: 15 icon + label links (Dashboard, HTML Editor, CSS Styles, JS Console, Components, Templates, Snippets, Projects, Live Preview, Responsive Design, Color Palette, Typography, Animations, Debugger, Settings) with colored icons and a pink hover. On narrow screens it collapses to icons only.
+- Main: a fixed hero (40% of the height) split into two equal halves. Left: red gradient with the text "CSS Animation" and animated translucent rounded shapes. Right: light gray with the 3D heart loaded from human-heart-cutaway.glb using three.js (auto-fit and center the model, set metalness to 0, sRGB output, soft lights, slow auto-rotation, drag to rotate, resize with the container, show "Loading…" until it loads).
+- Below the hero: a scrollable article "HTML, CSS & JavaScript" with an intro paragraph, then sections HTML / CSS / JavaScript, each with a colored square badge (HTML red, CSS blue, JS yellow) beside its paragraph, then "How they work together".
+- Footer: centered small text "© 2026 Training 2026. All rights reserved."
+- A round red floating "+" button at the bottom-right (same action as "Add content").
+- The layout must stay intact when the window is resized.
